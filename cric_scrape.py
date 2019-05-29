@@ -17,7 +17,7 @@ def trade_spider(max_pages):
 
             href = "http://stats.espncricinfo.com" + link.get('href') + "?class=2;template=results;type=batting"
             href = href.replace("content", "engine")
-            print(href)
+            print("--------------------------------")
             print(link.string)
             get_score_data(href)
         pages += 1
@@ -37,4 +37,3 @@ def get_score_data(year_url):
             print(runs_list[0] + ": " + runs_list[4] + ", Cummulative Score: " + str(sum(cum)))
 
 trade_spider(51)
-
